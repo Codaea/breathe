@@ -4,7 +4,7 @@ import { viteSingleFile } from "vite-plugin-singlefile"
 export default defineConfig({
     plugins: [ viteSingleFile()],
     build: {
-        minify: true,
+        minify: 'terser',
     },
     
 })
