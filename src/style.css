@@ -1,0 +1,67 @@
+:root {
+    --a: 8s;
+    --b: paused;
+}
+
+body {
+    background: #3c4491;
+    color: rgb(170, 165, 201);
+    display: flex;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+#instruction {
+    transition: all 0.5s;
+    margin-bottom: 20px;
+}
+
+#parent {
+    display: flex;
+    flex-grow: 1;
+    width: 100%;
+}
+
+#parent, body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#circle1, #circle2, #circle3 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: breathe var(--a) infinite ease-in-out;
+    animation-play-state: var(--b); 
+    border-radius: 50%;
+}
+
+#circle1 {
+    width: 80vmin;
+    height: 80vmin;
+    background-color: rgb(85, 70, 185);
+}
+
+
+#circle2 {
+    width: 70%;
+    height: 70%;
+    background-color: rgb(170, 165, 201);
+}
+
+#circle3 {
+    width: 40%;
+    height: 40%;
+    background-color: rgb(146, 125, 67);
+}
+
+@keyframes breathe {
+    0%, 100% {
+        transform: scale(.7);
+    }
+    50% {
+        transform: scale(1);
+    }
+}
